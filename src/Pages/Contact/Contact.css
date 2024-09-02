@@ -1,0 +1,88 @@
+.contact {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg-color);
+}
+
+.contact-container {
+  width: 50%;
+  height: 70%;
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 2rem;
+  background-color: var(--bg-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: var(--main-color-);
+  font-family: "Kenia", sans-serif;
+  margin-bottom: 1rem;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--main-color-);
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--off-color);
+  border-radius: 4px;
+  font-family: var(--font-family);
+}
+
+input.error,
+textarea.error {
+  border-color: red;
+}
+
+.error-text {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--main-color-);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-family: var(--font-family);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--off-color);
+}
+
+.success-message {
+  text-align: center;
+  color: green;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+@media (max-width: 600px) {
+  .contact-container {
+    padding: 1rem;
+  }
+
+  button {
+    padding: 0.5rem;
+  }
+}

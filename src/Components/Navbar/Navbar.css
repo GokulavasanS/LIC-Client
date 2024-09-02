@@ -1,0 +1,118 @@
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 6vh;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-logo{
+    flex: 1;
+  }
+
+  .logo{
+    color: var(--main-color);
+    font-size: 2rem;
+    margin: 0 3rem;
+    cursor: pointer;
+    font-family: "Kenia", sans-serif;
+    transition: 0.3s ease;
+    text-decoration: none;
+  }
+
+  .nav-menu{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    flex: 2;
+  }
+  
+  .nav-link {
+    color: var(--off-color);
+    margin: 0 3rem;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .nav-link:hover, .nav-link.active {
+    color: var(--main-color);
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 21px;
+    cursor: pointer;
+    margin-right: 10vw;
+  }
+
+  .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #000;
+    border-radius: 10px;
+  }
+
+  /* ---------------------------------------------------------------mobile----------------------------------------------------------- */
+
+  @media (max-width: 1024px) {
+
+    .navbar{
+      width: 100vw;
+    }
+    .nav-menu {
+      position: absolute;
+      top: 60px;
+      right: 0;
+      height: calc(100vh - 60px);
+      background-color: #fff;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+    }
+  
+    .nav-menu.open {
+      transform: translateX(0);
+    }
+  
+    .nav-link {
+      margin: 20px 0;
+      padding: 0px 0 20px 0;
+      text-align: center;
+      border-bottom: solid 2px var(--off-color);
+      width: 70%;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  }
+
+  /* ---------------------------------------------------------------small-laptop----------------------------------------------------------- */
+
+  @media (max-width: 1500px){
+
+    .nav-link{
+      font-size: 0.8rem;
+    }
+
+    .logo{
+      font-size: 1.8rem;
+    }
+  }
+
+  
