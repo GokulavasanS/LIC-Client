@@ -42,9 +42,9 @@ body {
 
 .slider .list .item .content {
   position: absolute;
-  top: 20%;
+  top: 23%;
   width: 1140px;
-  max-width: 80%;
+  max-width: 85%;
   left: 50%;
   transform: translateX(-50%);
   padding-right: 30%;
@@ -61,7 +61,11 @@ body {
 }
 
 .slider .list .item .type {
-  color: #14ff72cb;
+  /* color: #14ff72cb; */
+  color: var(--main-color);
+}
+.slider .list .item .description{
+  font-size: 1rem;
 }
 
 .slider .list .item .button {
@@ -74,7 +78,7 @@ body {
 
 .slider .list .item .button button {
   border: none;
-  background-color: #eee;
+  background-color: var(--main-color);
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   cursor: pointer;
@@ -98,7 +102,7 @@ body {
   bottom: 50px;
   left: 50%;
   width: max-content;
-  z-index: 100;
+  z-index: 1;
   display: flex;
   gap: 20px;
 }
@@ -120,17 +124,17 @@ body {
 }
 
 .thumbnail .item.active img {
-  transform: scale(1.2); /* Slightly scale up the image */
+  transform: scale(1.2); 
 }
 
 .thumbnail .item.active {
-  z-index: 2; /* Ensure active item is on top */
+  z-index: 2; 
 }
 
 .slider .list .item.active img {
   transition: opacity 1s ease;
   opacity: 1;
-  transform: scale(1.1); /* Scale up the main image slightly */
+  transform: scale(1); 
 }
 
 /* Next/Prev Arrows */
@@ -138,7 +142,7 @@ body {
   position: absolute;
   top: 80%;
   right: 52%;
-  z-index: 100;
+  z-index: 1;
   width: 300px;
   max-width: 30%;
   display: flex;
@@ -147,10 +151,10 @@ body {
 }
 
 .nextPrevArrows button {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  background-color: #14ff72cb;
+  background-color: var(--main-color);
   border: none;
   color: #fff;
   font-family: monospace;
@@ -167,10 +171,26 @@ body {
 /* Media Queries */
 @media screen and (max-width: 678px) {
   .slider .list .item .content {
+
     padding-right: 0;
   }
 
   .slider .list .item .content .title {
+    font-size: 30px;
+  }
+  .slider .list .item .content .type {
     font-size: 50px;
+  }
+
+  .slider .list .item .description {
+    font-size: 14px;
+  }
+
+  .slider .list .item .button{
+    width: 90%;
+  }
+  .nextPrevArrows{
+    width: 150px;
+    max-width: 100%;
   }
 }

@@ -1,78 +1,80 @@
 import React, { useState } from 'react';
-import './EMICalculator.css'; // Add your CSS file for styling
+import './EMICalculator.css';
 
-const EMICalculator = () => {
-  const [principal, setPrincipal] = useState('');
-  const [interest, setInterest] = useState('');
-  const [tenure, setTenure] = useState('');
+function EMICalculator() {
+  const [loanAmount, setLoanAmount] = useState('');
+  const [interestRate, setInterestRate] = useState('');
+  const [loanTenure, setLoanTenure] = useState('');
   const [emi, setEmi] = useState(null);
+  const [totalInterest, setTotalInterest] = useState(null);
+  const [totalPayment, setTotalPayment] = useState(null);
 
   const calculateEMI = () => {
-    const P = parseFloat(principal);
-    const r = parseFloat(interest) / (12 * 100);
-    const n = parseFloat(tenure);
+    const principal = parseFloat(loanAmount);
+    const rate = parseFloat(interestRate) / 12 / 100;
+    const tenure = parseInt(loanTenure) * 12;
 
-    if (P && r && n) {
-      const emi = (P * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
-      setEmi(emi.toFixed(2));
-    }
-  };
+    const emi = (principal * rate * Math.pow(1 + rate, tenure)) / (Math.pow(1 + rate, tenure) - 1);
+    const totalPayment = emi * tenure;
+    const totalInterest = totalPayment - principal;
 
-  const handleReset = () => {
-    setPrincipal('');
-    setInterest('');
-    setTenure('');
-    setEmi(null);
+    setEmi(emi.toFixed(2));
+    setTotalInterest(totalInterest.toFixed(2));
+    setTotalPayment(totalPayment.toFixed(2));
   };
 
   return (
-    <div className="emi">
     <div className="emi-calculator">
       <h2>EMI Calculator</h2>
-      <div className="emi-inputs">
+      <div className="calculator-form">
         <div className="input-group">
-          <label htmlFor="principal">Principal Amount:</label>
+          <label htmlFor="loanAmount">Loan Amount</label>
           <input
             type="number"
-            id="principal"
-            value={principal}
-            onChange={(e) => setPrincipal(e.target.value)}
-            placeholder="Enter principal amount"
+            id="loanAmount"
+            value={loanAmount}
+            onChange={(e) => setLoanAmount(e.target.value)}
+            placeholder="Enter loan amount"
           />
         </div>
         <div className="input-group">
-          <label htmlFor="interest">Annual Interest Rate (%):</label>
+          <label htmlFor="interestRate">Interest Rate (Annual %)</label>
           <input
             type="number"
-            id="interest"
-            value={interest}
-            onChange={(e) => setInterest(e.target.value)}
-            placeholder="Enter annual interest rate"
+            id="interestRate"
+            value={interestRate}
+            onChange={(e) => setInterestRate(e.target.value)}
+            placeholder="Enter interest rate"
           />
         </div>
         <div className="input-group">
-          <label htmlFor="tenure">Loan Tenure (Months):</label>
+          <label htmlFor="loanTenure">Loan Tenure (Years)</label>
           <input
             type="number"
-            id="tenure"
-            value={tenure}
-            onChange={(e) => setTenure(e.target.value)}
-            placeholder="Enter loan tenure in months"
+            id="loanTenure"
+            value={loanTenure}
+            onChange={(e) => setLoanTenure(e.target.value)}
+            placeholder="Enter loan tenure"
           />
         </div>
+        <button className="calculate-button" onClick={calculateEMI}>Calculate EMI</button>
       </div>
-      <div className="emi-buttons">
-        <button onClick={calculateEMI}>Calculate EMI</button>
-        <button onClick={handleReset}>Reset</button>
-      </div>
-      {emi !== null && (
-        <div className="emi-result">
-          <h3>Your EMI is: ₹{emi}</h3>
+      {emi && (
+        <div className="result">
+          <h3>Results</h3>
+          <div className="result-item">
+            <span>EMI:</span> ₹{emi}
+          </div>
+          <div className="result-item">
+            <span>Total Interest:</span> ₹{totalInterest}
+          </div>
+          <div className="result-item">
+            <span>Total Payment:</span> ₹{totalPayment}
+          </div>
         </div>
       )}
     </div>
-    </div>
   );
-};
+}
 
 export default EMICalculator;
