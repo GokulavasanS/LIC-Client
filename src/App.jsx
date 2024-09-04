@@ -5,10 +5,12 @@ import Home from './Pages/Home/Home';
 import './App.css';
 import EMICalculator from './Pages/EMI/EMIcalculator';
 import Contact from './Pages/Contact/Contact';
+import DisableShortcuts from './DisableShortcuts';
 
 function App() {
   return (
     <Router>
+      <DisableShortcuts />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />        
