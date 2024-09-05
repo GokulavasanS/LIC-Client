@@ -3,37 +3,53 @@ import './Home.css';
 
 const slides = [
   {
-    img: '/img1.webp',
+    img: '/001.png',
+    title: 'Exclusive Offers',
+    type: 'LIC',
+    description: 'Join hands with us and enjoy exclusive free foreign trips.',
+  },
+  {
+    img: '/002.png',
     title: 'Insurance',
-    type: "LIC",
-    description: 'Connecting people through Insurance',
+    type: 'LIC',
+    description: 'Connecting people through insurance.',
   },
   {
-    img: '/img2.webp',
-    title: 'Investment',
-    type: "MUTUAL FUNDS",
-    description: 'Securing your financial future',
+    img: '/003.png',
+    title: 'Elite Solutions',
+    type: 'LIC',
+    description: 'Providing elite insurance solutions for high-net-worth individuals.',
   },
   {
-    img: '/img3.webp',
-    title: 'Retirement',
-    type: "PENSION PLANS",
-    description: 'Planning for a comfortable retirement',
+    img: '/004.png',
+    title: 'Investment Optimization',
+    type: 'Investment',
+    description: 'Reclaim and maximize the value of your past investments.',
   },
   {
-    img: '/img5.webp',
-    title: 'Health Insurance',
-    type: "HEALTHY",
-    description: 'Ensuring your health and well-being with LIC health insurance',
+    img: '/005.png',
+    title: 'Tailored Investments',
+    type: 'Investment',
+    description: 'Tailoring new investment opportunities to meet your goals.',
   },
   {
-    img: '/img4.webp',
-    title: 'Savings',
-    type: "SAVINGS PLANS",
-    description: 'Building your wealth with disciplined savings',
+    img: '/006.png',
+    title: 'Secure Returns',
+    type: 'Investment',
+    description: 'Securing guaranteed returns to safeguard your financial future.',
   },
-  
-
+  {
+    img: '/007.png',
+    title: 'Stress-Free Retirement',
+    type: 'Retirement',
+    description: 'Enjoy a stress-free retirement with a secure pension plan.',
+  },
+  {
+    img: '/008.png',
+    title: 'Savings Maximization',
+    type: 'Savings',
+    description: 'Maximize your savings with expert income tax relaxation strategies.',
+  },
 ];
 
 function Home() {
@@ -97,7 +113,7 @@ function Home() {
               <div className="type">{slide.type}</div>
               <div className="description">{slide.description}</div>
               <div className="button">
-                <button>SEE MORE</button>
+                <button>Let's Talk</button>
               </div>
             </div>
           </div>
