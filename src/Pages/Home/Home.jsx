@@ -4,16 +4,17 @@ import './Home.css';
 const slides = [
   {
     img: '/001.png',
-    title: 'Exclusive Offers',
-    type: 'LIC',
-    description: 'Join hands with us and enjoy exclusive free foreign trips.',
-  },
-  {
-    img: '/002.png',
     title: 'Insurance',
     type: 'LIC',
     description: 'Connecting people through insurance.',
   },
+  {
+    img: '/002.png',
+    title: 'Exclusive Offers',
+    type: 'LIC',
+    description: 'Join hands with us and enjoy exclusive free foreign trips.',
+  },
+  
   {
     img: '/003.png',
     title: 'Elite Solutions',
