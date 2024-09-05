@@ -1,16 +1,4 @@
-body {
-  margin: 0;
-  background-color: #000;
-  color: #eee;
-  font-family: 'Poppins', sans-serif;
-  font-size: 12px;
-}
-
-/* Slider */
 .slider {
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
   position: relative;
 }
 
@@ -145,10 +133,7 @@ body {
   right: 52%;
   z-index: 1;
   width: 300px;
-  max-width: 30%;
-  display: flex;
-  gap: 10px;
-  align-items: center;
+  overflow: hidden;
 }
 
 .nextPrevArrows button {
@@ -157,16 +142,12 @@ body {
   border-radius: 50%;
   background-color: var(--main-color);
   border: none;
-  color: #fff;
-  font-family: monospace;
-  font-weight: bold;
-  transition: 0.5s;
+  padding: 10px;
   cursor: pointer;
 }
 
-.nextPrevArrows button:hover {
-  background-color: #fff;
-  color: #000;
+button.prev {
+  left: 10px;
 }
 
 /* Media Queries */
