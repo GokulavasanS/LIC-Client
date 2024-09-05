@@ -24,7 +24,8 @@ function EMICalculator() {
   };
 
   return (
-    <div className="emi-calculator">
+    <div className="emi-page">
+      <div className="emi-calculator">
       <h2>EMI Calculator</h2>
       <div className="calculator-form">
         <div className="input-group">
@@ -73,6 +74,7 @@ function EMICalculator() {
           </div>
         </div>
       )}
+    </div>
     </div>
   );
 }

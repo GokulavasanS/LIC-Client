@@ -5,6 +5,14 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+.emi-page{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
 .emi-calculator {
   max-width: 500px;
   margin: 130px auto;

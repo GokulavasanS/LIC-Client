@@ -121,11 +121,12 @@ body {
   object-fit: cover;
   border-radius: 20px;
   box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+  border: 2px solid #fff;
   transition: transform 0.8s ease, opacity 0.8s ease;
 }
 
 .thumbnail .item.active img {
-  transform: scale(1.2); 
+  transform: translateX(-20px) scale(1.2); 
 }
 
 .thumbnail .item.active {
@@ -156,7 +157,7 @@ body {
   height: 55px;
   border-radius: 50%;
   background-color: var(--main-color);
-  border: none;
+  border: 3px solid #fff;
   color: #fff;
   font-family: monospace;
   font-weight: bold;
