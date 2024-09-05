@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Home.css';
 
 const slides = [
@@ -57,11 +58,12 @@ function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [thumbnailSlides, setThumbnailSlides] = useState(slides);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsTransitioning(false);
-    }, 800); // Duration matching the CSS transition
+    }, 800);
 
     return () => clearTimeout(timer);
   }, [currentIndex]);
@@ -100,6 +102,10 @@ function Home() {
     }
   };
 
+  const goToContactPage = () => {
+    navigate('/contact'); // Navigate to the contact page
+  };
+
   return (
     <div className="slider">
       <div className="list">
@@ -114,8 +120,8 @@ function Home() {
               <div className="type">{slide.type}</div>
               <div className="description">{slide.description}</div>
               <div className="button">
-                <button>Let's Talk</button>
-              </div>
+              <button onClick={goToContactPage}>Let's Talk</button> 
+               </div>
             </div>
           </div>
         ))}

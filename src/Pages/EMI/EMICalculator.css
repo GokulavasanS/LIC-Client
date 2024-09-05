@@ -14,10 +14,11 @@ body {
 }
 
 .emi-calculator {
+  width:100vw;
   max-width: 500px;
   margin: 130px auto;
   background-color: var(--bg-color);
-  padding: 20px;
+  padding: 30px;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   z-index: 0;
