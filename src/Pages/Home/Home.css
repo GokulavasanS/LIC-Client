@@ -1,4 +1,16 @@
+body {
+  margin: 0;
+  background-color: #000;
+  color: #eee;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+}
+
+/* Slider */
 .slider {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
   position: relative;
 }
 
@@ -133,7 +145,10 @@
   right: 52%;
   z-index: 1;
   width: 300px;
-  overflow: hidden;
+  max-width: 30%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
 .nextPrevArrows button {
@@ -142,12 +157,16 @@
   border-radius: 50%;
   background-color: var(--main-color);
   border: none;
-  padding: 10px;
+  color: #fff;
+  font-family: monospace;
+  font-weight: bold;
+  transition: 0.5s;
   cursor: pointer;
 }
 
-button.prev {
-  left: 10px;
+.nextPrevArrows button:hover {
+  background-color: #fff;
+  color: #000;
 }
 
 /* Media Queries */

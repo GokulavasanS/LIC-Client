@@ -10,7 +10,7 @@ import DisableShortcuts from './DisableShortcuts';
 function App() {
   return (
     <Router>
-      {/* <DisableShortcuts /> */}
+      <DisableShortcuts />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />        
