@@ -6,7 +6,6 @@ const slides = [
   {
     img: '/001.png',
     title: 'Insurance',
-   
     description: 'Connecting people through insurance.',
   },
   {

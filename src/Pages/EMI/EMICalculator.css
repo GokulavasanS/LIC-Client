@@ -5,7 +5,12 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-.emi-page{
+.emi{
+  margin-top: 10%;
+  height: 100vh;
+}
+
+.hlv-page {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,8 +18,8 @@ body {
   height: 100vh;
 }
 
-.emi-calculator {
-  width:100vw;
+.hlv-calculator {
+  width: 100vw;
   max-width: 500px;
   margin: 130px auto;
   background-color: var(--bg-color);
@@ -24,10 +29,18 @@ body {
   z-index: 0;
 }
 
-.emi-calculator h2 {
+.hlv-calculator h2 {
   text-align: center;
   color: var(--main-color);
   margin-bottom: 20px;
+}
+
+.section-title {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--main-color);
 }
 
 .calculator-form {
@@ -77,7 +90,7 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.result h3 {
+.result h3, h4 {
   margin-bottom: 15px;
   color: var(--main-color);
 }
@@ -89,13 +102,23 @@ body {
   margin-bottom: 10px;
 }
 
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
 @media screen and (max-width: 678px) {
-  .emi-calculator {
+  .emi{
+    margin-top: 10%;
+  }
+  .hlv-calculator {
     margin: 20px;
     padding: 15px;
   }
 
   .result-item {
+    margin-bottom: 20%;
     font-size: 16px;
   }
 }
